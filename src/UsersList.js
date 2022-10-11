@@ -7,7 +7,8 @@ function UsersList(props) {
     // console.log(usersList);
 
     let usersElements = usersList.map(user => 
-        <li>{user}<span>X</span></li>
+        <li key={user.id}>{user.name}<span onClick={() => props.delUser(user.id)
+        }>X</span></li>
     );
 
     
